@@ -8,6 +8,8 @@ from urllib.parse import urlparse
 from productos import URLS
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+from pyspark.sql import functions as F
+from pyspark.sql.types import StructType, StructField, StringType, DoubleType, TimestampType, DateType
 
 
 
@@ -71,5 +73,42 @@ df_resultados = pd.DataFrame(resultados)
 df_resultados["batch_id"] = batch_id
 df_resultados["ingestion_timestamp"] = ingestion_timestamp
 
+
+#Transformo a spark_df
+spark_df = spark.createDataFrame(df_resultados)
+
+# Si ya tienes spark_df, normaliza tipos antes de escribir
+spark_df = (
+    spark_df
+    .withColumn("precio", F.col("precio").cast("double"))
+    .withColumn("fecha_extraccion", F.to_date("fecha_extraccion", "dd-MM-yyyy"))
+    .withColumn("ingestion_timestamp", F.to_timestamp("ingestion_timestamp"))
+    .withColumn("load_date", F.current_date())  # útil para particionar/controlar cargas
+)
+
+# Crear tabla Delta si no existe (primera vez)
+spark.sql("""
+CREATE TABLE IF NOT EXISTS supermercadoetl.bronze.precios_scraping (
+  supermercado STRING,
+  nombre STRING,
+  descripcion STRING,
+  precio DOUBLE,
+  url STRING,
+  fecha_extraccion DATE,
+  batch_id STRING,
+  ingestion_timestamp TIMESTAMP,
+  load_date DATE
+)
+USING DELTA
+""")
+
+# Carga incremental diaria (append)
+(
+    spark_df
+    .write
+    .format("delta")
+    .mode("append")
+    .saveAsTable("supermercadoetl.bronze.precios_scraping")
+)
 
 
