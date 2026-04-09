@@ -14,14 +14,18 @@ from etl_modules.config import (
 )
 
 
+# Avoid noisy SSL warnings when fallback verify=False is used.
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def coto_scraping(url: str, corte: str):
+    """Scrape one Coto product URL and return a normalized record dict."""
     try:
         try:
+            # Preferred HTTPS request with certificate verification enabled.
             response = requests.get(url, headers=COTO_HEADERS, params=COTO_PARAMS, timeout=REQUEST_TIMEOUT_SECONDS)
         except requests.exceptions.SSLError as exc:
+            # Fallback for environments where CA chain cannot be validated.
             logging.warning("SSL error en %s: %s", url, exc)
             response = requests.get(
                 url,
@@ -31,6 +35,7 @@ def coto_scraping(url: str, corte: str):
                 verify=SSL_VERIFY_FALLBACK,
             )
 
+        # Parse nested payload returned by Coto endpoint.
         data = response.json()
         datadto_price_str = data["contents"][0]["Main"][0]["record"]["attributes"]["sku.dtoPrice"][0]
         dto_price_json = json.loads(datadto_price_str)
@@ -47,11 +52,13 @@ def coto_scraping(url: str, corte: str):
             "url": url,
         }
     except Exception:
+        # Return None so caller can record URL-level failure without stopping the batch.
         logging.exception("Error con %s", url)
         return None
 
 
 def run_coto_scraping(urls: dict):
+    """Run Coto scraping over configured URLs and collect successes/errors."""
     resultados = []
     errores_scraping = []
 
@@ -66,6 +73,7 @@ def run_coto_scraping(urls: dict):
                 if info:
                     resultados.append(info)
                 else:
+                    # Explicitly track URLs that returned no record.
                     errores_scraping.append(
                         {
                             "corte": nombre,
@@ -77,6 +85,7 @@ def run_coto_scraping(urls: dict):
                     )
                     logging.warning("No se pudo extraer info para %s - %s", nombre, url_actual)
             except Exception as exc:
+                # Defensive catch in case unexpected errors bypass coto_scraping.
                 errores_scraping.append(
                     {
                         "corte": nombre,

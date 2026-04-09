@@ -26,6 +26,7 @@ from products import URLS
 
 
 def get_spark_session():
+    """Get active Spark session or create one if script runs standalone."""
     session = SparkSession.getActiveSession()
     if session is None:
         session = SparkSession.builder.getOrCreate()
@@ -33,18 +34,25 @@ def get_spark_session():
 
 
 def main():
+    """Orchestrate end-to-end extract run: scrape, load, audit and summary."""
+    # 1) Initialize logging and Spark context.
     setup_logging()
     spark = get_spark_session()
+
+    # 2) Force Spark session to the configured catalog and log resolved targets.
     spark.sql(f"USE CATALOG {CATALOG}")
     log_runtime_context()
     log_execution_targets(spark)
 
+    # 3) Create run identifiers used across bronze and audit tables.
     batch_id = str(uuid.uuid4())
     ingestion_timestamp = datetime.now().isoformat(timespec="seconds")
 
+    # 4) Run scraping and build dataframe with traceability fields.
     resultados, errores_scraping = run_coto_scraping(URLS)
     df_resultados = prepare_result_df(resultados, batch_id, ingestion_timestamp)
 
+    # 5) Compute run-level metrics for console summary and audit tables.
     total_productos_configurados = len(URLS)
     total_urls_objetivo = sum(len(item["urls"]) for item in URLS.values())
     total_exitos = len(resultados)
@@ -53,12 +61,15 @@ def main():
     tasa_exito = (total_exitos / total_urls_objetivo * 100) if total_urls_objetivo else 0
     df_errores = pd.DataFrame(errores_scraping)
 
+    # 6) Ensure destination schemas/tables exist before writing.
     ensure_objects(spark)
 
     try:
+        # Guardrail: fail early if scraping produced no valid rows.
         if df_resultados.empty:
             raise ValueError("El scraping no devolvió filas; no se puede cargar una tabla vacía.")
 
+        # 7) Persist start event, bronze data and URL-level errors.
         write_event_log(
             spark,
             batch_id=batch_id,
@@ -78,6 +89,7 @@ def main():
             rows_written=len(df_resultados),
         )
     except Exception as exc:
+        # 8) On failure, still persist scraping errors and failed run event.
         write_scraping_errors(spark, errores_scraping, batch_id)
         write_event_log(
             spark,
@@ -91,6 +103,7 @@ def main():
         )
         raise
 
+    # 9) Print human-friendly summary for interactive runs.
     print_run_summary(
         batch_id=batch_id,
         ingestion_timestamp=ingestion_timestamp,
@@ -104,6 +117,7 @@ def main():
         df_errores=df_errores,
     )
 
+    # 10) Persist summary payload and structured run metrics into audit.
     write_summary_log(
         spark,
         batch_id=batch_id,
@@ -127,4 +141,5 @@ def main():
 
 
 if __name__ == "__main__":
+    # Allows direct execution as a script and reuse via imports in notebooks/jobs.
     main()

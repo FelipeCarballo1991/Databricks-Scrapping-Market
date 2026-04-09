@@ -18,6 +18,7 @@ from etl_modules.config import (
 
 
 def ensure_objects(spark) -> None:
+    """Create required schemas and Delta tables if they do not exist."""
     spark.sql(f"CREATE SCHEMA IF NOT EXISTS {AUDIT_SCHEMA}")
     spark.sql(f"CREATE SCHEMA IF NOT EXISTS {BRONZE_SCHEMA}")
     spark.sql(
@@ -89,6 +90,7 @@ def ensure_objects(spark) -> None:
 
 
 def prepare_result_df(resultados: list, batch_id: str, ingestion_timestamp: str) -> pd.DataFrame:
+    """Build the bronze-ready pandas DataFrame adding batch traceability fields."""
     df_resultados = pd.DataFrame(resultados)
     df_resultados["batch_id"] = batch_id
     df_resultados["ingestion_timestamp"] = ingestion_timestamp
@@ -105,6 +107,7 @@ def write_event_log(
     error_message=None,
     stacktrace=None,
 ) -> None:
+    """Append one operational ETL event (STARTED/SUCCESS/FAILED/SUMMARY) to audit logs."""
     log_row = pd.DataFrame(
         [
             {
@@ -135,6 +138,7 @@ def write_event_log(
 
 
 def write_scraping_errors(spark, errores_scraping: list, batch_id: str) -> None:
+    """Persist row-level scraping failures to audit for later troubleshooting."""
     if not errores_scraping:
         return
 
@@ -150,7 +154,9 @@ def write_scraping_errors(spark, errores_scraping: list, batch_id: str) -> None:
 
 
 def write_bronze_prices(spark, df_resultados: pd.DataFrame) -> None:
+    """Cast and load scraped prices into bronze Delta table using append mode."""
     spark_df = spark.createDataFrame(df_resultados)
+    # Normalize data types before persisting to keep bronze schema stable.
     spark_df = (
         spark_df.withColumn("precio", F.col("precio").cast("double"))
         .withColumn("fecha_extraccion", F.to_date("fecha_extraccion", "dd-MM-yyyy"))
@@ -170,6 +176,7 @@ def write_run_metrics(
     total_errores: int,
     tasa_exito: float,
 ) -> None:
+    """Write aggregated run metrics (one row per batch) to audit.run_metrics."""
     metrics_row = pd.DataFrame(
         [
             {
@@ -199,6 +206,7 @@ def write_summary_log(
     total_errores: int,
     tasa_exito: float,
 ) -> None:
+    """Write a SUMMARY event into audit.etl_logs with serialized run metrics payload."""
     summary_payload = {
         "batch_id": batch_id,
         "ingestion_timestamp": ingestion_timestamp,

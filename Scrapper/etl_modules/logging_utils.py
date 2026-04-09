@@ -15,6 +15,7 @@ from etl_modules.config import (
 
 
 def setup_logging() -> None:
+    """Configure the base logger format and level for the pipeline."""
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s | %(levelname)s | %(message)s",
@@ -22,6 +23,7 @@ def setup_logging() -> None:
 
 
 def log_runtime_context() -> None:
+    """Log resolved configuration values (env/catalog/schemas/tables) at startup."""
     logging.info("Runtime context loaded")
     logging.info("ENV=%s", ENV)
     logging.info("CATALOG=%s", CATALOG)
@@ -36,6 +38,7 @@ def log_runtime_context() -> None:
 
 
 def log_execution_targets(spark) -> None:
+    """Log active Databricks catalog/schema and expected target tables."""
     target_row = spark.sql(
         "SELECT current_catalog() AS current_catalog, current_schema() AS current_schema"
     ).collect()[0]
@@ -60,6 +63,7 @@ def print_run_summary(
     df_resultados,
     df_errores,
 ) -> None:
+    """Print a human-readable run summary with success and error breakdown."""
     print("=" * 80)
     print(f"RESUMEN DE CORRIDA - EXTRACT {SOURCE_NAME.upper()}")
     print("=" * 80)
