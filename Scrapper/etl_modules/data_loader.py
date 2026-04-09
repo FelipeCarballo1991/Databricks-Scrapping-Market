@@ -77,7 +77,7 @@ def ensure_objects(spark) -> None:
           supermercado STRING,
           nombre STRING,
           descripcion STRING,
-          precio DOUBLE,
+          precio STRING,
           url STRING,
           fecha_extraccion DATE,
           batch_id STRING,
@@ -154,11 +154,15 @@ def write_scraping_errors(spark, errores_scraping: list, batch_id: str) -> None:
 
 
 def write_bronze_prices(spark, df_resultados: pd.DataFrame) -> None:
-    """Cast and load scraped prices into bronze Delta table using append mode."""
+    """Load scraped prices into bronze Delta table using append mode.
+    
+    Stores precio as STRING to capture numeric values, "Sin stock", and other text statuses.
+    Type casting and normalization deferred to silver layer.
+    """
     spark_df = spark.createDataFrame(df_resultados)
-    # Normalize data types before persisting to keep bronze schema stable.
+    # Convert precio to string (as-is from scraping) and format dates
     spark_df = (
-        spark_df.withColumn("precio", F.col("precio").cast("double"))
+        spark_df.withColumn("precio", F.col("precio").cast("string"))
         .withColumn("fecha_extraccion", F.to_date("fecha_extraccion", "dd-MM-yyyy"))
         .withColumn("ingestion_timestamp", F.to_timestamp("ingestion_timestamp"))
         .withColumn("load_date", F.current_date())
