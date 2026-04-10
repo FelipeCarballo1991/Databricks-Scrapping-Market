@@ -18,7 +18,7 @@ from etl_modules.config import (
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-def coto_scraping(url: str, corte: str):
+def coto_scraping(url: str, corte: str, categoria: str):
     """Scrape one Coto product URL and return a normalized record dict."""
     try:
         try:
@@ -49,6 +49,7 @@ def coto_scraping(url: str, corte: str):
             "nombre": corte,
             "descripcion": nombre,
             "precio": precio,
+            "categoria": categoria,
             "url": url,
         }
     except Exception:
@@ -65,11 +66,12 @@ def run_coto_scraping(urls: dict):
     for corte in urls.keys():
         tiendas = urls[corte]["urls"]
         nombre = urls[corte]["nombre"]
+        categoria = urls[corte].get("categoria", "Sin Categoría")  # Default if missing
         for supermercado in tiendas.keys():
             url_actual = tiendas[supermercado]
 
             try:
-                info = coto_scraping(url_actual, nombre)
+                info = coto_scraping(url_actual, nombre, categoria)
                 if info:
                     resultados.append(info)
                 else:
