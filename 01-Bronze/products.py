@@ -507,6 +507,456 @@ URLS = {
                 
                 }                                                                                                                                             
      
-        }                                  
+        },
+        "tapas_empanadas": {
+        "nombre": "Tapa Para Empanadas X12 SIGNO DE ORO 500g",        
+        "unidad": "Docena",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/tapa-para-empanadas-xl-signo-de-oro-500g-/_/R-00168073-00168073-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                                                                             
+     
+        },
+        "aceitunas_morixe": {
+        "nombre": "Aceitunas Verdes Descarozadas Morixe 300g",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/aceitunas-verdes-descarozadas-morixe-300g-/_/R-00587546-00587546-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                                                                             
+     
+        },
+        "maple_huevo": {
+        "nombre": "Huevo Blanco Maple X 30u",        
+        "unidad": "unidad",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/huevo-blanco-maple-x-30u-/_/R-00032342-00032342-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                                                                             
+     
+        },
+        "arroz": {
+        "nombre": "Arroz Largo Fino MOLINOS ALA",        
+        "unidad": "kg",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/arroz-largo-fino-molinos-ala-paquete-1-kg/_/R-00002270-00002270-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                                                                         
+     
+        },
+        "perejil": {
+        "nombre": "Perejil x unidad",        
+        "unidad": "unidad",        
+        "categoria": "Verdura",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/perejil-x-uni-/_/R-00047599-00047599-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                                                                         
+     
+        },
+        "fideos_tirabuzon": {
+        "nombre": "Fideos Tirabuzón LUCCHETTI 500g",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/fideos-tirabuzon-lucchetti-500g-/_/R-00571998-00571998-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "aceite_oliva": {
+        "nombre": "Aceite Oliva . Morixe Pet 500 Ml",        
+        "unidad": "ltr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/aceite-oliva-morixe-pet-500-ml-/_/R-00511517-00511517-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "leche_serenisima": {
+        "nombre": "Leche Larga Vida Entera Ua Clasica 3% LA SERENISIMA 1l",        
+        "unidad": "ltr",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/leche-larga-vida-entera-ua-clasica-3-la-serenisima-1l/_/R-00251875-00251875-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "tomate_lata": {
+        "nombre": "Tomate Perita ARCOR Lata 400 Gr",        
+        "unidad": "unidad",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/tomate-perita-arcor-lata-400-gr-/_/R-00047153-00047153-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "levadura": {
+        "nombre": "Levadura Seca CALSA Mi Pan 10 Gr",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/levadura-seca-calsa-mi-pan-10-gr-/_/R-00172247-00172247-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "harina_morixe": {
+        "nombre": "Harina Trigo 0000 MORIXE 1kg",        
+        "unidad": "kg",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/harina-trigo-0000-morixe-1kg-/_/R-00480052-00480052-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "mozzarella_barraza": {
+        "nombre": "Queso Mozzarella BARRAZA 1kg",        
+        "unidad": "kg",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/queso-mozzarella-barraza-1kg-/_/R-00468184-00468184-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "condimento_empanadas": {
+        "nombre": "Condimento Para Empanadas La Parmesana 15g",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/condimento-para-empanadas-la-parmesana-15g-/_/R-00608743-00608743-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "condimento_pizza": {
+        "nombre": "Condimento Para Pizza La Campagnola Sob 23 Grm",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/condimento-para-pizza-la-campagnola-sob-23-grm-/_/R-00532605-00532605-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "oregano": {
+        "nombre": "Orégano Dos Anclas 25 Grm",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/oregano-dos-anclas-25-grm-/_/R-00542995-00542995-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "pimenton": {
+        "nombre": "Pimenton Seleccionado Dos Anclas Pou 50 Grm",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/pimenton-seleccionado-dos-anclas-pou-50-grm-/_/R-00513136-00513136-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "aji_molido": {
+        "nombre": "Aji Molido DOS ANCLAS Sobre 50 Gr",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/aji-molido-dos-anclas-sobre-50-gr-/_/R-00011420-00011420-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "pan_rallado": {
+        "nombre": "Pan Rallado Fortificado Preferido 1kg",        
+        "unidad": "kg",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/pan-rallado-fortificado-preferido-1kg-/_/R-00575394-00575394-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "bizcochuelo_morixe": {
+        "nombre": "Bizcochuelo Sabor Chocolate Morixe 540 Grm",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/bizcochuelo-sabor-chocolate-morixe-540-grm-/_/R-00541561-00541561-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "premezcla_chipa": {
+        "nombre": "Premezcla Para Chipá Mamá Cocina 400g",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/premezcla-para-chipa-mama-cocina-400g-/_/R-00572261-00572261-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "maizena": {
+        "nombre": "Almidón De Maiz Maizena 500g",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/almidon-de-maiz-maizena-500g-/_/R-00562266-00562266-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "azucar": {
+        "nombre": "Azúcar Superior Real LEDESMA 1kg",        
+        "unidad": "kg",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/azucar-superior-real-ledesma-1kg-/_/R-00218834-00218834-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "sal": {
+        "nombre": "Sal Fina CELUSAL 500g",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/sal-fina-celusal-500g-/_/R-00011362-00011362-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "yerba_rosamonte": {
+        "nombre": "Yerba Mate Suave Seleccion Especial Rosamonte 1 Kg",        
+        "unidad": "kg",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/yerba-mate-suave-seleccion-especial-rosamonte-1-kg-/_/R-00588908-00588908-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "cafe_dolca": {
+        "nombre": "NESCAFÉ® Dolca Original x 170gr",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/nescafe-dolca-original-x-170gr-/_/R-00574317-00574317-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "te_menta_cachamai": {
+        "nombre": "Té Menta CACHAMAI Caja 20 Saquitos",        
+        "unidad": "unidad",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/te-menta-cachamai-caja-20-saquitos-/_/R-00074504-00074504-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "condimento_guiso_tuco": {
+        "nombre": "Condimento Para Guiso Y Tuco La Parmesana 15g",        
+        "unidad": "gr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/condimento-para-guiso-y-tuco-la-parmesana-15g-/_/R-00580494-00580494-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "pollo_entero": {
+        "nombre": "Pollo Entero Fresco 4 Kg",        
+        "unidad": "kg",        
+        "categoria": "Pollo",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/pollo-entero-fresco-x-uni-4-kg-refrigerado-/_/R-00012791-00012791-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "pata_muslo": {
+        "nombre": "Pata Muslo Con Piel X Kg",        
+        "unidad": "kg",        
+        "categoria": "Pollo",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/pata-muslo-con-piel-x-kg-congelados-/_/R-00042210-00042210-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "pechuga": {
+        "nombre": "Suprema Sin Piel X Kg",        
+        "unidad": "kg",        
+        "categoria": "Pollo",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/suprema-sin-piel-x-kg-congelado-/_/R-00042214-00042214-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "manteca_sancor": {
+        "nombre": "Manteca LA SERENISIMA 200gr",        
+        "unidad": "gr",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/manteca-la-serenisima-200gr-/_/R-00003818-00003818-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "yogurt_ilolay_bebible": {
+        "nombre": "Yogur Entero ILOLAY Frutilla Bebible 1kg",        
+        "unidad": "kg",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/yogur-entero-ilolay-frutilla-bebible-1kg-/_/R-00013921-00013921-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "yogurt_ilolay_pote": {
+        "nombre": "Yogur Entero Cremoso Sabor Frutilla Ilolay 120g",        
+        "unidad": "gr",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/yogur-entero-cremoso-sabor-frutilla-ilolay-120g-/_/R-00572652-00572652-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "queso_untable": {
+        "nombre": "Queso Crema Crematto Clasico Milkaut 445g",        
+        "unidad": "gr",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/queso-crema-crematto-clasico-milkaut-445g-/_/R-00574858-00574858-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "queso_sardo": {
+        "nombre": "Sardo Trozado La Paulina X 1 Kg",        
+        "unidad": "kg",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/sardo-trozado-la-paulina-x-1-kgm-/_/R-00013174-00013174-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "crema_leche": {
+        "nombre": "Crema Para Cocinar LA SERENISIMA 330ml",        
+        "unidad": "ml",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/crema-para-cocinar-la-serenisima-330ml-/_/R-00489460-00489460-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "queso_cremon": {
+        "nombre": "Queso Cremón Doble Crema La Serenísima X Kg",        
+        "unidad": "ml",        
+        "categoria": "Lacteos",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/queso-cremon-doble-crema-la-serenisima-x-kg-/_/R-00047711-00047711-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                                                        
 
 }
