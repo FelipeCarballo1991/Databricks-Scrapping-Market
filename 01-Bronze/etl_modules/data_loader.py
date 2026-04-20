@@ -79,6 +79,7 @@ def ensure_objects(spark) -> None:
           descripcion STRING,
           precio STRING,
           categoria STRING,
+          unidad STRING,
           url STRING,
           fecha_extraccion DATE,
           batch_id STRING,

@@ -59,6 +59,8 @@ CREATE TABLE IF NOT EXISTS supermercadoetl_prod.silver.precios_productos (
   
   precio_normalizado DECIMAL(18,2) 
     COMMENT 'Precio en formato numérico decimal (pesos argentinos)',
+  unidad STRING 
+    COMMENT 'Unidad del producto',
   
   fecha_extraccion DATE 
     COMMENT 'Fecha de extracción del precio (parte de PK compuesta)',
@@ -98,6 +100,8 @@ USING (
         '.'
       ) AS DECIMAL(18,2)
     ) AS precio_normalizado,
+    -- Unidad del producto
+    unidad,
     
     -- Dimensión temporal
     fecha_extraccion,
@@ -172,6 +176,7 @@ WHEN NOT MATCHED THEN INSERT (
   descripcion,
   url,
   precio_normalizado,
+  unidad,
   fecha_extraccion,
   fecha_actualizacion
 ) VALUES (
@@ -182,6 +187,7 @@ WHEN NOT MATCHED THEN INSERT (
   source.descripcion,
   source.url,
   source.precio_normalizado,
+  source.unidad,
   source.fecha_extraccion,
   source.fecha_actualizacion
 );
