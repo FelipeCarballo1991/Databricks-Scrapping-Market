@@ -1042,7 +1042,7 @@ URLS = {
                 }                                                                                       
         },
         "esponja_cocina": {
-        "nombre": "Detergente Cocina",        
+        "nombre": "Esponja Cocina",        
         "unidad": "unidad",        
         "categoria": "Limpieza",
         "urls": {
@@ -1053,8 +1053,8 @@ URLS = {
                 
                 }                                                                                       
         },
-        "detergente": {
-        "nombre": "Detergente Cocina",        
+        "cif": {
+        "nombre": "cif Cocina",        
         "unidad": "medio_ltr",        
         "categoria": "Limpieza",
         "urls": {
@@ -1124,7 +1124,31 @@ URLS = {
                 # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
                 
                 }                                                                                       
-        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        },
+        "aceite_girasol": {
+        "nombre": "Aceite Girasol",        
+        "unidad": "ltr",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/aceite-girasol-canuelas-botella-1-5-l-/_/R-00099437-00099437-200"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        },
+        "harina_leudante": {
+        "nombre": "Harina Leudante",        
+        "unidad": "kg",        
+        "categoria": "Almacen",
+        "urls": {
+                "Coto": "https://www.cotodigital.com.ar/sitios/cdigi/productos/harina%20leudante"
+                # "Dia": "",
+                # "Jumbo": "https://www.jumbo.com.ar/pollo-fresco-con-menudos-2/p",
+                # "Carrefour": "https://www.carrefour.com.ar/pollo-entero-congelado-x-kg-699692/p"
+                
+                }                                                                                       
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
                                                                         
 
 }
